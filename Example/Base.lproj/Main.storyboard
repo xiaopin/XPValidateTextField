@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银行卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="490-Xf-mhT">
+                                <rect key="frame" x="16" y="60" width="60" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9id-E9-ceu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="giM-9D-ywQ" customClass="XPValidateTextField">
+                                <rect key="frame" x="86" y="53" width="279" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DNl-id-B2w"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5o-KJ-g9K">
+                                <rect key="frame" x="16" y="120" width="49" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5HO-Pr-klX" customClass="XPValidateTextField">
+                                <rect key="frame" x="86" y="113" width="279" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xrK-Ld-LuA"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身份证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfD-UL-KDI">
+                                <rect key="frame" x="16" y="180" width="49" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lvP-yi-rxl" customClass="XPValidateTextField">
+                                <rect key="frame" x="86" y="173" width="279" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rZc-RY-FZL"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="490-Xf-mhT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="8VJ-qE-kg3"/>
+                            <constraint firstItem="lvP-yi-rxl" firstAttribute="centerY" secondItem="LfD-UL-KDI" secondAttribute="centerY" id="ALz-AW-rnh"/>
+                            <constraint firstItem="giM-9D-ywQ" firstAttribute="leading" secondItem="490-Xf-mhT" secondAttribute="trailing" constant="10" id="Ef5-ST-5I5"/>
+                            <constraint firstItem="lvP-yi-rxl" firstAttribute="trailing" secondItem="5HO-Pr-klX" secondAttribute="trailing" id="JC6-h5-SFX"/>
+                            <constraint firstItem="lvP-yi-rxl" firstAttribute="leading" secondItem="5HO-Pr-klX" secondAttribute="leading" id="KkN-IP-bP3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="giM-9D-ywQ" secondAttribute="trailing" constant="10" id="Oa6-Tb-XRt"/>
+                            <constraint firstItem="LfD-UL-KDI" firstAttribute="width" secondItem="G5o-KJ-g9K" secondAttribute="width" id="OpM-4g-US9"/>
+                            <constraint firstItem="G5o-KJ-g9K" firstAttribute="top" secondItem="490-Xf-mhT" secondAttribute="bottom" constant="40" id="RYu-WL-Guj"/>
+                            <constraint firstItem="5HO-Pr-klX" firstAttribute="centerY" secondItem="G5o-KJ-g9K" secondAttribute="centerY" id="TCU-O3-CgE"/>
+                            <constraint firstItem="490-Xf-mhT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="U81-08-4KR"/>
+                            <constraint firstItem="giM-9D-ywQ" firstAttribute="centerY" secondItem="490-Xf-mhT" secondAttribute="centerY" id="e8H-fm-nVK"/>
+                            <constraint firstItem="5HO-Pr-klX" firstAttribute="leading" secondItem="giM-9D-ywQ" secondAttribute="leading" id="o7P-iM-ezF"/>
+                            <constraint firstItem="LfD-UL-KDI" firstAttribute="leading" secondItem="G5o-KJ-g9K" secondAttribute="leading" id="oCr-pX-cSq"/>
+                            <constraint firstItem="G5o-KJ-g9K" firstAttribute="leading" secondItem="490-Xf-mhT" secondAttribute="leading" id="qUZ-RV-VwR"/>
+                            <constraint firstItem="LfD-UL-KDI" firstAttribute="top" secondItem="G5o-KJ-g9K" secondAttribute="bottom" constant="40" id="raY-JD-JyR"/>
+                            <constraint firstItem="G5o-KJ-g9K" firstAttribute="width" secondItem="490-Xf-mhT" secondAttribute="width" multiplier="0.816667" id="xKw-r9-2Ra"/>
+                            <constraint firstItem="5HO-Pr-klX" firstAttribute="trailing" secondItem="giM-9D-ywQ" secondAttribute="trailing" id="z2w-nW-QTp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bankCardTextField" destination="giM-9D-ywQ" id="EgM-iy-Y3j"/>
+                        <outlet property="idcardTextField" destination="lvP-yi-rxl" id="co2-Sj-hS1"/>
+                        <outlet property="phoneTextField" destination="5HO-Pr-klX" id="df7-Bg-gk4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+    </scenes>
+</document>
