@@ -198,6 +198,30 @@ static char const kXPValidateTextFieldDelegateKey = '\0';
     [super setSecureTextEntry:NO];
 }
 
+- (void)setText:(NSString *)text {
+    NSString *regexp = nil;
+    switch (self.validateMode) {
+        case XPTextFieldValidateModeNone:
+            [super setText:text];
+            return;
+        case XPTextFieldValidateModeIDCard:
+            regexp = @"^[1-9]\\d{16}[\\dX]$";
+            break;
+        case XPTextFieldValidateModePhone:
+            regexp = @"^1\\d{10}$";
+            break;
+        case XPTextFieldValidateModeBankCard:
+            regexp = @"^[1-9]\\d{15,18}$";
+            break;
+    }
+    text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES[cd] %@", regexp];
+    if ([predicate evaluateWithObject:text]) {
+        [super setText:text];
+        [self xp_textFieldTextDidChangeNotification:nil];
+    }
+}
+
 - (NSString *)text {
     switch (self.validateMode) {
         case XPTextFieldValidateModeNone: return super.text;
